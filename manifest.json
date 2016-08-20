@@ -1,0 +1,16 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "豆瓣刷刷"
+   },
+   "content_scripts": [ {
+      "js": [ "jquery.min.js", "background.js" ],
+      "matches": [ "https://www.douban.com/*"],
+      "run_at": "document_end"
+   } ],
+   "description": "豆瓣小组自动评论工具（可用于帖子置顶）",
+   "manifest_version": 2,
+   "name": "豆瓣刷刷",
+   "permissions": [ "webNavigation", "activeTab", "tabs", "https://www.douban.com/*" ],
+   "version": "1.0"
+}
